@@ -45,10 +45,10 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.1 }
 );
 
-document.querySelectorAll(".section, .hero-card, .card, .list-item").forEach((el) => {
+document.querySelectorAll(".hero-card, .card, .timeline-item").forEach((el) => {
   el.classList.add("reveal");
   observer.observe(el);
 });
