@@ -68,3 +68,35 @@ if (themeSelect) {
     }
   });
 }
+
+const setupCollapsibleLists = () => {
+  const lists = document.querySelectorAll(".pub-list");
+  lists.forEach((list) => {
+    const items = Array.from(list.querySelectorAll("li"));
+    const limit = Number(list.dataset.limit || 8);
+    if (items.length <= limit) {
+      return;
+    }
+    items.forEach((item, index) => {
+      if (index >= limit) {
+        item.classList.add("hidden");
+      }
+    });
+    list.classList.add("collapsed");
+
+    const toggle = document.createElement("div");
+    toggle.className = "pub-list-toggle";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Show more";
+    button.addEventListener("click", () => {
+      const isCollapsed = list.classList.contains("collapsed");
+      list.classList.toggle("collapsed");
+      button.textContent = isCollapsed ? "Show less" : "Show more";
+    });
+    toggle.appendChild(button);
+    list.parentElement.appendChild(toggle);
+  });
+};
+
+setupCollapsibleLists();

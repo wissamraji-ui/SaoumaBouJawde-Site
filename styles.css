@@ -330,6 +330,24 @@ main {
   line-height: 1.6;
 }
 
+.pub-list.collapsed li.hidden {
+  display: none;
+}
+
+.pub-list-toggle {
+  margin-top: 12px;
+}
+
+.pub-list-toggle button {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--ink);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
