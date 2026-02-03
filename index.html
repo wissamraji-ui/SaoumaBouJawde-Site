@@ -459,7 +459,7 @@
             <p>boujaoud@aub.edu.lb</p>
             <p class="muted">Beirut, Lebanon</p>
           </div>
-          <form class="contact-form" aria-label="Contact form">
+          <form class="contact-form" aria-label="Contact form" action="mailto:boujaoud@aub.edu.lb" method="post" enctype="text/plain">
             <label>
               Name
               <input type="text" name="name" placeholder="Your name" />
@@ -472,8 +472,7 @@
               Message
               <textarea name="message" rows="4" placeholder="How can we collaborate?"></textarea>
             </label>
-            <button class="btn primary" type="button">Send message</button>
-            <p class="form-note">This demo form can be wired to your preferred email service.</p>
+            <button class="btn primary" type="submit">Send message</button>
           </form>
         </div>
       </section>
