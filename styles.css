@@ -450,3 +450,14 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+
+.pub-list .pub-subheading {
+  list-style: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding-top: 8px;
+}
